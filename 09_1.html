@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    .box{
+      width: 100%;
+      /* % : 비율(부모기준에 따른 양으로 표현), 추가되는 요소를 포함하지 않으며, 넘치게 만들 수도 있음 */
+      
+      height:100px;
+      background-color:  bisque;
+    }
+ㅡ
+     .box2{
+      width: auto;
+      /* auto : 사용가능한 수평공간을 차지하는 상태 / 부모기준으로 꽉차게, 추가되는 요소를 함께 가져가며 폭값을 유지하기 위해 노력 */
+      height:100px;
+      background-color:  gray;
+    }
+
+    #width{
+      width:500px;
+      height:250px;
+      border:5px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="width">
+    <div class="box">100%</div>
+    <div class="box2">auto</div>
+  </div>
+</body>
+</html>

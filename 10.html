@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 박스 나열</title>
+<style>
+img{
+  width: 500px;
+  height: 300px;
+  float: right;
+  /* left, right, none .. 왼쪽, 오른쪽으로부터 나열시작, 효과없음 */
+}
+
+div{
+  width:300px;
+  height:300px;
+  border:5px solid #000;
+  float:left; /*왼쪽으로부터 나열 = 왼쪽부터 1,2,3...*/
+  margin-right: 30px;
+}
+.boxr{
+  width:200px;
+  height:200px;
+  border:5px solid #000;
+  float:none; /*옆의 박스에 영향을 주는 속성, 나열하고자 하는 박스와 함께 나열값 (소스 꼬이니까 다 지정해주기) */
+}
+</style>
+</head>
+<body>
+  <!-- float : 박스를 옆으로 나열할 때 사용 / 레이아웃을 나열하거나 형성+삽화를 넣을 때 -->
+  <div>
+<img src="img/버즈 우디.jpg" alt="버즈우디">
+<h1>title</h1>
+<p>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br/>
+     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+     when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/>
+     It has survived not only five centuries, but also the leap into electronic typesetting,
+     remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+     containing Lorem Ipsum passages, and more recently with desktop publishing software
+     like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+  </div>
+  <br/>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>
