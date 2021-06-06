@@ -9,35 +9,42 @@
     ul{
       overflow:hidden;
     }
+    
     li{
       list-style:none; /*블릿 삭제*/
       float:left;
       padding:15px;
     }
+
     li:first-child{ /*같은부모 아래에서 형제관계의 첫번째에 해당하는 요소를 선택 */
         background-color:beige;
     }
+
     li:last-child{  /*같은부모 아래에서 형제관계의 마지막번째에 해당하는 요소를 선택 */
       background-color:antiquewhite;
     }
+
     li:nth-child(2n+1){
        /*형제관계의 순번째에 위치하는 요소를 선택 (1,2,3..)2n+1(홀수) 2n(짝수)*/
       background-color:aqua;
       color:chocolate;
     }
+
     li:nth-child(2n){
       background-color:black;
       color:azure;
     }
+
     li:nth-child(3){ /*세번째 요소 선택*/
       border:3px solid #f00;
     }
+
      li:nth-child(5) a { /*다섯번째 요소의 자식인 a태그 선택*/
       color:coral;
     }
+
     .box:first-child{
       background-color:darkgreen;
-
     }
   </style>
 </head>
