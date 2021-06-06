@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자의 활용</title>
+  <style>
+    input:focus{
+      /* input에 초점이 맞춰진 상태 */
+      background-color:aqua;
+    }
+
+    div{
+      width:650px;
+      height:300px;
+      background-color:  antiquewhite;
+      overflow:hidden;
+    }
+    /* checked input에 check가 된 상태*/
+    input[type="checkbox"]:checked+div{
+      background-color:aqua;
+
+    }
+    /* +동위선택자 바로 뒤에 위치하는 특정요소를 선택 */
+
+    /* 문자선택자 */
+    p::first-letter{ /* 특정한 선택자에 첫번째 글자를 선택 */
+      font-size:20px;
+      font-weight:900;
+      color:aqua;
+    }
+
+    p::first-line{ /* 특정한 선택자에 첫번째 라인을 선택 */
+      background-color: cornflowerblue;
+    }
+
+    h1::before{
+      content:'앞쪽>';
+      font-size:30px;
+      font-weight: 900;
+      color:aquamarine;
+    }
+    
+    p::after{
+      content:'<뒤쪽';
+      font-size:30px;
+      font-weight: 900;
+      color:aquamarine;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상태선택자 : 마우스의 반응에 따른 상태를 선택 / input:focus -->
+  <!-- input:focus : focus가 된 input 태그를 선택
+       input:enabled : 입력이 가능한 input 태그를 선택 
+       input:disable : 입력이 불가능한 input 태그를 선택  -->
+<input type="text" />
+
+<br/>
+<input type="checkbox"/>
+
+<!-- 가상요소선택자 : 선택될 요소의 앞 혹은 뒤쪽으로 가상의 요소를 넣어 표현 (태그가 실제 존재하지 않지만 추가가 가능)
+      ::before 특정요소의 앞에 삽입/ 내용이나 가상의 요소를 부여
+      ::after 특정요소의 뒤에 삽입/ 내용이나 가상이 요소를 부여  -->
+<div>
+  <h1>Lorem Ipsum</h1>
+  <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
+    by Cicero are also reproduced in their exact original form, accompanied by English versions
+    from the 1914 translation by H. Rackham.
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
+    by Cicero are also reproduced in their exact original form, accompanied by English versions
+    from the 1914 translation by H. Rackham.
+  </p>
+</div>
+</body>
+</html>

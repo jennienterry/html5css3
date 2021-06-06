@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자의 활용</title>
+  <style>
+    input[type="text"]{
+      background-color: coral;
+    }
+
+    img[src$="jpg"]{ /* jpg, png, gif 사진파일 확장명으로 접근 가능 */
+      border:3px solid #000;
+    }
+
+    div[class*="box"]{ /* #box가 아닌 이렇게도 접근 가능 */
+      background-color:aqua;
+    }
+  </style>
+</head>
+<body>
+  <!-- 속성선택자 : 특정한 속성이나 특정한 속성값을 가지고 있는 html요소를 선택 []
+  [속성이름="속성값"]
+  [속성이름$="속성값"]
+  [속성이름*="속성값"]
+  -->
+
+  <input type="text" />
+  <div class="box">
+    <img src="img/곰.jpg" alt="곰">
+    <img src="img/terry.jpg" alt="테리">
+    <img src="img/P20170808_032142365_BF3C7E02-D76D-4464-939D-67679AE384C3.JPG" alt="linda">
+  </div>
+</body>
+</html>

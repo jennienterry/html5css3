@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 박스 나열</title>
+<style>
+div{
+  width:200px;
+  height:200px;
+  border:5px solid #000;
+  float:left; /*왼쪽으로부터 나열 = 왼쪽부터 1,2,3...*/
+  margin-right: 30px;
+}
+.boxr{
+  width:200px;
+  height:200px;
+  border:5px solid #000;
+  float:left; /*옆의 박스에 영향을 주는 속성, 나열하고자 하는 박스와 함께 나열값 (소스 꼬이니까 다 지정해주기) */
+}
+
+.boxc{
+  width:500px;
+  height:300px;
+  margin:0;
+  margin-top:30px;
+  clear: both;
+}
+
+#allbox{
+  float:none;
+  border:none;
+  margin:auto;
+  background-color: aquamarine;
+  width:720px;/* w:200*3=600 + b:5*6=30 + 30*3=90 = 720*/
+  height:210px; /*h:200 + b:5*2 = 10 = 210 */
+}
+
+.boxs{
+  padding:20px;
+  box-sizing : border-box; /* 패딩,선을 폭값안에서 함께 표현 = padding값을 width폭안에 넣어서 계산*/
+}
+</style>
+</head>
+<body>
+  <!-- float : 박스를 옆으로 나열할 때 사용 / 레이아웃을 나열하거나 형성+삽화를 넣을 때 -->
+  <br/>
+  <div id="allbox">
+  <div>1</div>
+  <div>2</div>
+  <div class="boxr">3</div>
+  </div>
+
+  <!-- clear : float와 함께 사용, float제거할 때 사용 
+        - left : 좌측 나열을 제거
+        - right : 우측 나열을 제거
+        - both : 양쪽 나열을 제거
+  
+  <div class="boxc">제거할거야</div> -->
+    <br/>
+    <br/>
+    <br/>
+  <!-- box-sizing : 박슷의 크기를 어떤 것의 기준으로 계산할지 지정하는 속성-->
+
+<div class="boxs">box-sizing</div>
+</body>
+</html>

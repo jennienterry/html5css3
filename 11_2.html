@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display-응용</title>
+  <style>
+  *{
+    padding:0;
+    margin: 0;
+  }
+
+  /* body{
+    text-align:center;
+  } */
+
+  span{
+    border:4px solid #000;
+    /*inline과 block의 합성속성
+      : 글자와 같이 옆으로 나열되어지는 성격을 가지고 있으나 block요소처럼 css에대한 스타일 처리가 가능함*/
+    display:inline-block;
+    width:200px;
+  }
+
+  .transform{
+    display: block;
+    width:600px;
+    margin:0auto;
+    /* display:none; 안보이게 처리*/
+  }
+
+  div{
+    background-color:cadetblue;
+    text-align:center;
+  }
+  </style>
+</head>
+<body>
+  <div>
+  <span>span01</span>
+  <span>span02</span>
+  <span>span03</span>
+  </div>
+
+  <span class="transform">span04</span>
+  <span class="transform">span05</span>
+  <span class="transform">span06</span>
+</body>
+</html>
