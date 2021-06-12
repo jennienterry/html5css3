@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>포지션</title>
 </head>
 <body>
   <!--
@@ -15,16 +15,19 @@
 * static - 기본값 (위치 영향을 받지 않음)
 
 * relative - 상대위치 (박스가 나열되는 순서대로 위치가 지정 top,left)
+             부모기준을 삼으며, 다른 박스의 영향을 받아 레이아웃이 제대로 표현되어질 수 있도록
 
-* absolute - 절대위치 (html화면 기준으로 위치가 지정- 위치값 모두 적용)
+* absolute - 절대위치 (html화면 기준으로 위치가 지정- 위치값 모두 적용) , 다른것에 영향 받지x (겹치게 나타날 때 활용가능)
              부모가 존재할 때 부모의 기준으로 위치가 지정
-             값을 주지 않으면 왼쪽상단으로 감
+             값을 주지 않으면 왼쪽상단으로 감 (왼쪽상단에 딱 붙어서 나타남)
+          -> 모든 박스가 다 absolute면 세개가 다 겹쳐지게 나옴 (제일 아래에 있는 박스가 제일 윗면에서 보이게 됨)
+          -> z축 선상의 특징을 가짐
+
+* z-index : 위치요소의 우선순위를 변경하는 속성 1~9999
+            수가 클수록 위에 보여짐(얹어짐) !!
 
 * fixed - 고정위치 (html화면 기준으로 위치가 지정 - 위치모두 적용)
           고정된 상태로 표현! - 메뉴, 배너
-
-* z-index : 위치요소의 우선순위를 변경하는 속성 1~9999
-            수가 클수록 위에 보여짐(얹어짐)
 
 * nth-child(몇번째) : 몇번째 child를 고르는 것  -->
 </body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web fonts</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <style>
+    @font-face{ /* style 제일 위에 위치 */
+      font-family : 'nanum'; /* 폰트이름 선언 */
+      font-weight:500; /* 폰트의 굵기 지정 */
+      src:url(font/NanumGothic.eot), url(font/NunumGothic.woff)format("woff");  /* 확장자 한번 더 알려줘야함 */
+      /* eot : explorer8버전 이하 호환해야할 때 붙임 */
+    }
+
+    *{padding:0;
+    margin:0;}
+
+    body{font-size:14px;
+    font-family: "NanumSquare", "NotoSansKR", sans-serif;}
+    /* 순서대로 적어놓고 앞선 폰트가 적용이 되지 않으면[호환이 되지 않으면] 그 다음 폰트로 적용이 된다. */
+
+    .test1{
+      font-family: "NanumMyeongjo", serif;
+    }
+
+    p{margin:40px 0px;}
+
+    .test2{
+      font-family: 'Black Han Sans', sans-serif;
+    }
+
+    .test3{font-family: "nanum";}
+  </style>
+</head>
+<body>
+  <h1>웹폰트</h1>
+  <p class="test1">
+    webfont - 링크, 도메인, 브라우저와 상관없이 웹페이지 내에서 폰트가 연결되어지는 것
+    일반적으로 스타일을 이용해서 연결하는 방법 - 내컴퓨터 내에 설치된 폰트가 존재
+  </p>
+
+  <p class="test2">
+    webfont - cdn, 즉 링크를 이용해서 서버상의 폰트를 가져와서 웹페이지에 전달하는 방법
+    느려지거나 폰트가 나타나지 않는 경우가 생길 수 있음
+    <!-- 구글폰트에서 원하는 폰트 선택 후 selet > 링크로 가져옴 / 링크는 위<link>에, font-family는 css <style>에 지정 -->
+  </p>
+
+  <p class="test3">
+    @font-face : 폰트파일을 다운받거나 가져와서 문서와 직접 연결을 하여 폰트를 선언하는 방식
+                 빠르게 웹사이트에 적용, 오류가 적음
+                 <br/>
+                 웹폰트 확장자 종류
+                 EOT : IE8이하
+                 TTF : 가장 기본, 압축을 푸는 형태로 많이 사용
+                 WOFF : 대부분의 브라우저에서 지원
+                 WOFF2 : WOFF보다 압축률이 더 좋음
+            
+  </p>
+</body>
+</html>

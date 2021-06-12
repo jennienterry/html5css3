@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션 정렬</title>
+  <style>
+    *{
+    padding:0;
+    margin:0;
+    }
+
+    #wrap{
+      width:600px;
+      height:600px;
+      background-color: aquamarine;
+      position: relative;
+      top:100px;
+      left:400px;
+    }
+    
+    .box{
+      width:200px;
+      height:200px;
+      background-color: blueviolet;
+      text-align: center; /*가로*/
+      line-height:200px; /*세로*/
+      font-size:20px;
+      color:cornsilk;
+      font-weight:900;
+    }
+
+    .box:nth-child(1){
+      position: absolute;
+      top:0;
+      left:0;
+    }
+
+    .box:nth-child(2){
+      position: absolute;
+      top:200px;
+      left:200px;
+    }
+
+    .box:nth-child(3){
+      position: absolute;
+      top:400px;
+      left:400px; 
+      /* = botton:0; right:0px;*/
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box">포</div>
+    <div class="box">지</div>
+    <div class="box">션</div>
+  </div>
+  <!--
+* 글자 중앙정렬할 때 : text-align:center; (block은 margin값 auto처리)
+  position-absolute에서는 auto처리 불가
+
+* 태그 선택할 수 있는 형태 / nth-of-type(1)  
+
+* 부모안에 모든 자식요소들을 의미 nth-child
+* 부모안에 있는 자식들 중 선택하고 싶은, 선택한 특정 태그를 가진 자식들을 의미 nth-of-type
+-->
+</body>
+</html>

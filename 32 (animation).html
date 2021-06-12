@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    body{
+      background-color: coral;
+    }
+
+    .ani{
+      width:100px;
+      height:100px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50px, -50px); /* 위치 이동시 margin을 대신하여 사용가능함 */
+      background-color: mediumturquoise;
+      animation-name:test; /* 표현하고자 하는 요소에 "애니메이션 이름" */
+      animation-duration: 2s; /* 애니메이션 동작에 대한 시간 설정 가능 (지속될 시간값) */
+      animation-iteration-count: infinite; /* 애니메이션 횟수 = 숫자값(횟수) / infinite 무한반복 */
+      animation-direction:alternate;
+      /* 애니메이션 방향 - normal기본값, referse반대방향, alternate from<->to 교차반복 */  
+      animation-delay:2s;/* 애니메이션의 지연값 (~초 후에 실행) */
+      animation-timing-function: ease-in-out; /* 시간별 속도감 변화 */
+    }
+
+    .ani:hover{
+      animation-play-state: paused; /* 애니메이션 효과의 재생 혹은 중지를 하는 역할*/
+    }
+
+    /* 키프레임 : 구간별 스타일을 부여하여 동작을 표현 
+                 0%, from >> 시작점
+                 100%, to >> 끝점
+                 30% ~ 50% .. >> 중간 구간도 표현가능 */
+  
+    @keyframes test{
+      0%{
+        /* 시작 css */
+        border-radius: 0px;
+      }
+
+      30%{
+        border-radius: 50px 0 0 0;
+        background-color: mediumturquoise;}
+
+      50%{
+        border-radius: 0 50px 0 0;
+        background-color: mediumturquoise;
+      }
+
+      100%{
+        /* 끝 css*/
+        border-radius: 100px;
+        background-color: mediumturquoise;
+
+        }
+      }
+  </style>
+</head>
+<body>
+  <!-- animation : 각각의 프레임 내에서 스타일을 구현하여 동작을 만들 때 사용 / 간단한 동작구현이 가능하다. -->
+  <div class="ani">
+
+  </div>
+</body>
+</html>

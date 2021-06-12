@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    section{
+      width:300px;
+      height:300px;
+      border: 5px solid #000;
+      margin:100px;
+    }
+
+    div{
+      width:300px;
+      height:300px;
+      background-color: rgba(127,255,212,0.58);
+      text-align: center;
+      line-height:300px;
+      font-size:20px;
+      font-weight:900;
+      transform-origin: right top; /* 요소의 중심기점을 변경하는 속성 x,y (px,%,단어)
+                            x - left, right, center
+                            y - top, bottom, center */
+    }
+
+    div:hover{
+      transition-duration: 0.5s;
+      transform:translate(100px, 100px); /*특정한 위치로 이동하게 해줌 / px,% / (x축, y축) */
+      transform:translateX(100px); /*x축만큼 이동*/
+      transform:translateY(100px); /*x축만큼 이동*/
+
+      transform:scale(1.5, 1.5); /*사이즈확대, 축소 (배수로 표현) 0.9<1<1.1 (1기준으로 0.9축소 1.1확대)*/
+      transform:scale(0.5, 0.5); /*축소*/
+      transform:scaleX(2); /*x축으로 값만큼 확대, 축소*/
+      transform:scaleY(2); /*y축으로 값만큼 확대, 축소*/
+
+      transform:rotate(60deg); /*특정한 값만큼 회전 - 각도(deg) / 시계방향(기본값), 반시계방향(-붙이기)*/
+      transform:rotateX(90deg); /*x축을 기점으로 회전, 가로회전*/
+      transform:rotateY(90deg); /*y축을 기점으로 회전, 세로회전*/
+
+      transform:skew(45deg, 45deg);/*특정한 각도로 기울이기, 왜곡*/
+      transform:skewX(45deg);/*x축으로 기울이기*/
+      transform:skewY(45deg);/*y축으로 기울이기*/
+       }
+      
+  </style>
+</head>
+<body>
+  <section>
+    <div>transform</div>
+  </section>
+</body>
+</html>
