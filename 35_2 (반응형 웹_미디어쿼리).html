@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 반응형 적용시 필수 적용 ! 웹페이지의 너비를 기기의 화면 폭으로 설정 / 처음 페이지에서 원래 크기를 사용하도록 설정 -->
+  <title>미디어쿼리</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+
+    body{
+      background-color: moccasin;
+    }
+
+    /* and 뒤에는 항상 꼭 띄ㅝ주기 ! */
+ /* @media 미디어 쿼리선언*/
+    @media screen and (min-width:1024px){
+      /* 내가 보고있는 화면 사이즈 1024px이상 화면기준 */
+    body{background-color:aquamarine;
+    }
+    
+    @media screen and (max-width:1023px){
+      /* 내가 보고있는 화면 사이즈 1023px이하 화면기준 */
+      body{background-color: lightpink;}
+    }
+
+    @media screen and (min-width:480px) and (max-width:767px){ /* 480px~767px */
+      /* 내가 보고있는 화면 사이즈 1023px이하 화면기준 */
+      body{background-color: darksalmon;}
+    }
+    }
+  </style>
+</head>
+<body>
+ <!-- 원래 moccasin색이 없어지고 aquamarine으로 덮여있고 색이 다 달라야하는데 적용 안됨-->
+</body>
+</html>
